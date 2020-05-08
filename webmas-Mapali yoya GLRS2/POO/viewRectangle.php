@@ -1,18 +1,43 @@
-<?php
-require_once("Validator.php");
-require_once("Rectangle.php");
+<!--
+   1) Saisir la longueur et largeur d'un Rectangle à partir d'un formulaire
+         Longueur et Largueur doivent etre numeric(entier,reel)
+         Longueur positif
+         Largeur positif
+         Longueur> Largeur
 
-$errors=[];
-$resultat=[];
-$longueur="";
-$largeur="";
+   2)Traitements=>U.C
+      -Caluler le Dp
+      -Calculer le P
+      -Calculer la S
+      -Calculer la Diagonale
 
-//Ouvrir session_start()
-   session_start();
-   if(!isset($_SESSION['id'])){
-    $_SESSION['id']=0;
-   }
-    //session_destroy();
+
+      //Premire Heure
+         1-Afficher les erreurs
+         2-Garder les Bonnes Valeurs et effacer les Mauvaises Valeurs
+         3-Session => $_SESSION
+            //Ouvrir session_start()
+            //Fermer la Session session_destroy()
+            // $_SESSION est un tableau Associatif
+
+      //Deuxieme Heure
+
+      //POO en PHP=>Rectangle
+         1-Classe(Concrete ou Abstraite ou Interface)
+            a)Attribut(Instance ou Classe)
+            a)Methode(Instance ou Classe)
+         2-Objet
+
+         //Nommination
+           Classe => MaClasse
+           methode=> maMethode
+           attribut=> monattribut
+
+ -->
+ <?php
+
+
+   ///session_destroy();
 
     if( isset($_POST['btn_submit'])){
 
@@ -60,18 +85,7 @@ $largeur="";
 
  ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
 
          <div class="container mt-5">
 
@@ -166,11 +180,3 @@ $largeur="";
     <?php
        }
  ?>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>

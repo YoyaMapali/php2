@@ -7,18 +7,11 @@
 
 
             //Constructeur => methode instance concrete
-              public  function __construct($row=null){
-                        
-                      //Hydratation d'un objet Carre
-                      if($row!=null){
-                            $this->hydrate($row);
-                      }
-                
-              }
-             //Une ligne d'une Table BD et de l'encapsuler dans un Objet(Carre)
-              public function hydrate($row){
-                       $this->longueur=$row['longeur'];
-                       $this->id=$row['id'];
+              public  function __construct($longueur=null){
+                        if($longueur!=null){
+                          $this->longueur=$longueur;
+                        }
+                       
               }
                
               //metiers=>UC
